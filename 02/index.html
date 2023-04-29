@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+    <div id="root"></div>
+
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js" crossorigin></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js" crossorigin></script>
+
+<!--    <script crossorigin src="https://unpkg.com/react@18/umd/react.production.min.js"></script>-->
+<!--    <script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>-->
+<!--    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>-->
+
+    <script>
+
+        const book = (props) =>{
+            return React.createElement('div',{class:'book'},[
+                React.createElement('h2',{}, props.name),
+                React.createElement('p',{}, props.year),
+                React.createElement('p',{}, props.price),
+            ])
+        }
+
+        const App = () => {
+            return React.createElement('div',{}, [
+                React.createElement('h1',{id:'h1',class:'h1'}, 'Заголовок2'),
+                React.createElement(book, {name:'Основы js', year:2023, price:500}),
+                React.createElement(book,{name:'node js', year:2021, price:1000}),
+                // React.createElement(book),
+            ]);
+        }
+
+        const root = ReactDOM.createRoot(document.getElementById('root'));
+        root.render(React.createElement(App));
+
+
+
+
+    </script>
+
+</body>
+</html>
