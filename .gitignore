@@ -1,1 +1,18 @@
 .idea
+
+/02/node_modules
+/02/.pnp
+/02/.pnp.js
+/02/coverage
+/02/build
+
+# misc
+/02/.DS_Store
+/02/.env.local
+/02/.env.development.local
+/02/.env.test.local
+/02/.env.production.local
+
+/02/npm-debug.log*
+/02/yarn-debug.log*
+/02/yarn-error.log*
